@@ -1,0 +1,22 @@
+let searchBtn = document.querySelector('header .icons .fa-search')
+let searchForm = document.querySelector('header .search-bar')
+let menuBtn = document.querySelector('header #menu')
+let navbar = document.querySelector('header .navbar')
+
+
+window.onscroll = ()=>{
+    navbar.classList.remove('active')
+    searchForm.classList.remove('active')
+    searchBtn.classList.remove('fa-times')
+    menuBtn.classList.remove('fa-times')
+}
+
+searchBtn.addEventListener('click', ()=>{
+    searchForm.classList.toggle('active');
+    searchBtn.classList.toggle('fa-times');
+});
+
+menuBtn.addEventListener('click', ()=>{
+    navbar.classList.toggle('active');
+    menuBtn.classList.toggle('fa-times');
+})
